@@ -18,13 +18,13 @@ jobs:
 
     steps:
       - uses: actions/checkout@v4
-	  
-	  - name: Replace placeholders with secrets
-		  run: |
-			sed -i 's/clientid/${{ secrets.AZURE_CLIENT_ID }}/g' provider.tf backend.tf
-			sed -i 's/clientsecret/${{ secrets.AZURE_CLIENT_SECRET }}/g' provider.tf backend.tf
-			sed -i 's/subscriptionid/${{ secrets.AZURE_SUBSCRIPTION_ID }}/g' provider.tf backend.tf
-			sed -i 's/tenantid/${{ secrets.AZURE_TENANT_ID }}/g' provider.tf backend.tf
+   
+      - name: Replace placeholders with secrets
+        run: |
+          sed -i 's/clientid/${{ secrets.AZURE_CLIENT_ID }}/g' provider.tf backend.tf
+          sed -i 's/clientsecret/${{ secrets.AZURE_CLIENT_SECRET }}/g' provider.tf backend.tf
+          sed -i 's/subscriptionid/${{ secrets.AZURE_SUBSCRIPTION_ID }}/g' provider.tf backend.tf
+          sed -i 's/tenantid/${{ secrets.AZURE_TENANT_ID }}/g' provider.tf backend.tf
 
       - name: Log in to Azure
         uses: azure/login@v2
