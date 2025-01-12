@@ -44,7 +44,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: function-appup add musl target
+      - name: rustup add musl target
         run: function-appup target add x86_64-unknown-linux-musl
 
       - name: Cache function-app build deps
