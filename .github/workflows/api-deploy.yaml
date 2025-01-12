@@ -48,7 +48,7 @@ jobs:
         run: function-appup target add x86_64-unknown-linux-musl
 
       - name: Cache function-app build deps
-        uses: Swatinem/function-app-cache@v2
+        uses: Swatinem/rust-cache@v2
 
       - name: Build
         run: cargo build --release
