@@ -46,15 +46,6 @@ jobs:
         working-directory: terraform
         run: terraform apply -auto-approve
 
-  build-function-app-bin:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
 
-      - name: function-app-up add musl target
-        run: rustup target add x86_64-unknown-linux-musl
-
-      - name: Cache function-app build deps
-        uses: Swatinem/rust-cache@v2
 
 
