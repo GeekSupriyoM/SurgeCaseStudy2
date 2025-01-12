@@ -44,8 +44,8 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: rustup add musl target
-        run: function-appup target add x86_64-unknown-linux-musl
+      - name: function-app-up add musl target
+        run: rustup target add x86_64-unknown-linux-musl
 
       - name: Cache function-app build deps
         uses: Swatinem/rust-cache@v2
